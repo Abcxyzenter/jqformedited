@@ -7,11 +7,19 @@
 	var mobilemodal = $.cookie("mobilemodal");
 	var geoLand;
 
-
+ 
 
 $(window).scroll(function() {$( "#formwrapper" ).css('position', 'fixed')});
 
 $(window).resize(function() { 
+
+
+ if (parseInt($( "#formwrapper" ).css('left'))>(parseInt($(window).width())-(parseInt($( "#formwrapper" ).css('width'))))) {$( "#formwrapper" ).css('right', '5%'); $( "#formwrapper" ).css('left', 'auto')} 
+
+          $.cookie("formposTop",  $('#formwrapper').css('top'));
+          $.cookie("formposLeft",  $('#formwrapper').css('left'));
+          $.cookie("formposRight",  $('#formwrapper').css('right'));
+          $.cookie("formposBottom",  $('#formwrapper').css('bottom'));
 
 	if($( "#formwrapper" ).css('display', 'block')){ 
 

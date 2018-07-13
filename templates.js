@@ -108,6 +108,8 @@ $(document).ready(function(){
           $('#formwrapper').css('position', 'fixed');
 
       }
+
+ if (parseInt($( "#formwrapper" ).css('left'))>(parseInt($(window).width())-(parseInt($( "#formwrapper" ).css('width'))))) {$( "#formwrapper" ).css('right', '5%'); $( "#formwrapper" ).css('left', 'auto')} 
  
     $('<div>', { 
     class: 'formwrapper', 
